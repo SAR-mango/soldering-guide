@@ -1,0 +1,42 @@
+\documentclass[12pt]{article}
+
+\usepackage[paper=letterpaper, margin=0.5in, footskip=0.25in]{geometry}
+\usepackage{amsmath}
+\usepackage{datetime}
+\usepackage{amssymb}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[skip=0.15em]{caption}
+
+\newdateformat{monthyeardate}{\monthname[\THEMONTH] \THEYEAR}
+
+\makeatletter
+\def\@maketitle{
+  \newpage
+  \vspace*{-\topskip}
+  \begingroup\centering
+  \let \footnote \thanks
+  \hrule height \z@
+    {\fontsize{16}{19.2} \@title \par}
+    \vskip 0.25em 
+    {\large
+      \lineskip 0.5em 
+      \begin{tabular}[t]{c}
+        \@author
+      \end{tabular}\par}
+    \vskip 0.25em 
+    {\large \monthyeardate\today}
+  \par\endgroup
+  \vskip 1em
+}
+\makeatother
+
+\titleformat{\section}{\normalfont\scshape}{\textbf\thesection}{0em{ – }}{\textbf}
+\titleformat{\subsection}{\normalfont\scshape}{}{0em}{\textit}
+\titlespacing*{\section}{0pt}{1.5em}{0.5em}
+\titlespacing*{\subsection}{0pt}{1em}{0.33em}
+
+\title{\textbf{Soldering Guide}}
+\author{Erk Sampat}
