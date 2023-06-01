@@ -9,6 +9,8 @@
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage[skip=0.15em]{caption}
+\usepackage[font=normal]{subfig}
+\usepackage{framed}
 
 \newdateformat{monthyeardate}{\monthname[\THEMONTH] \THEYEAR}
 
@@ -34,7 +36,7 @@
 \makeatother
 
 \titleformat{\section}{\normalfont\scshape}{\textbf\thesection}{0em{\textbf{ – }}}{\textbf}
-\titleformat{\subsection}{\normalfont\scshape}{}{0em}{\textit}
+\titleformat{\subsection}{\normalfont\scshape}{\textit\thesubsection}{0em{\textit{ – }}}{\textit}
 \titlespacing*{\section}{0pt}{1.5em}{0.5em}
 \titlespacing*{\subsection}{0pt}{1em}{0.33em}
 
